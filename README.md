@@ -109,14 +109,36 @@ cd Crowdfunding-Platform-
 npm install
 ```
 
-**3. Start the backend server**
+**3. Increase JSON Server payload limit** *(required for image upload as Base64)*
+
+This step is necessary to prevent errors when creating campaigns with images. Open this file:
+
+```
+node_modules/milliparsec/dist/index.js
+```
+
+Find this line:
+
+```js
+const defaultPayloadLimit
+```
+
+And increase its value to 10MB:
+
+```js
+const defaultPayloadLimit = 10485760; // 10MB
+```
+
+Save the file before starting the server.
+
+**4. Start the backend server**
 ```bash
 npm start
 ```
 
 This starts json-server on `http://localhost:3000` and watches `db.json` for changes.
 
-**4. Open the frontend**
+**5. Open the frontend**
 
 Open `index.html` in your browser directly, or use a live server extension in VS Code.
 
