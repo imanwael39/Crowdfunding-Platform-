@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard — Fundly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <header class="site-nav">
+      <div class="container site-nav__inner">
+        <a href="index.html" class="site-nav__brand">Fund<span>ly</span></a>
+        <nav class="site-nav__links" id="nav-actions"></nav>
+      </div>
+    </header>
+
+    <main class="container form-page">
+      <div class="page-header">
+        <h1>Dashboard</h1>
+        <p class="text-muted">Campaigns you run and projects you support.</p>
+      </div>
+
+      <div class="dashboard-tabs" id="dash-tabs">
+        <button type="button" class="is-active" data-tab="campaigns">My campaigns</button>
+        <button type="button" data-tab="pledges">My pledges</button>
+      </div>
+
+      <div class="dashboard-panel" id="panel-campaigns"></div>
+      <div class="dashboard-panel" id="panel-pledges" hidden></div>
+    </main>
+
+    <div class="modal-overlay" id="edit-overlay" aria-hidden="true">
+      <div class="modal" role="dialog" aria-labelledby="edit-title">
+        <h2 id="edit-title">Edit campaign</h2>
+        <form id="edit-form">
+          <input type="hidden" id="edit-campaign-id" name="campaignId" />
+          <div class="field">
+            <label for="edit-deadline">Deadline</label>
+            <input id="edit-deadline" name="deadline" type="date" required />
+          </div>
+          <div class="field">
+            <label for="edit-description">Description</label>
+            <textarea id="edit-description" name="description" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Save changes</button>
+          <button type="button" class="btn btn-ghost btn-block mt-lg" id="edit-cancel">Cancel</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer-min">
+      <div class="container">© Fundly</div>
+    </footer>
+
+    <script type="module" src="js/pages/dashboard.js"></script>
+  </body>
+</html>

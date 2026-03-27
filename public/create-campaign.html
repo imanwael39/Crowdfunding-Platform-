@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New campaign — Fundly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <header class="site-nav">
+      <div class="container site-nav__inner">
+        <a href="index.html" class="site-nav__brand">Fund<span>ly</span></a>
+        <nav class="site-nav__links">
+          <a href="index.html">Discover</a>
+          <a href="dashboard.html">Dashboard</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container form-page">
+      <div class="page-header">
+        <h1>Launch a campaign</h1>
+        <p class="text-muted">Submit for review. Approved projects appear on the homepage.</p>
+      </div>
+      <div class="card">
+        <form id="campaign-form">
+          <div class="field">
+            <label for="title">Title</label>
+            <input id="title" name="title" required maxlength="120" />
+          </div>
+          <div class="field">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" required></textarea>
+          </div>
+          <div class="field">
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+              <option value="technology">Technology</option>
+              <option value="environment">Environment</option>
+              <option value="music">Music</option>
+              <option value="education">Education</option>
+              <option value="animals">Animals</option>
+              <option value="health">Health</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="goal">Funding goal (USD)</label>
+            <input id="goal" name="goal" type="number" min="1" step="1" required />
+          </div>
+          <div class="field">
+            <label for="deadline">Deadline</label>
+            <input id="deadline" name="deadline" type="date" required />
+          </div>
+          <div class="field">
+            <label for="image">Cover image</label>
+            <input id="image" name="image" type="file" accept="image/*" />
+            <div class="img-preview" id="img-preview" hidden></div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Submit campaign</button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer-min">
+      <div class="container">© Fundly</div>
+    </footer>
+
+    <script type="module" src="js/pages/create-campaign.js"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in — Fundly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <header class="site-nav">
+      <div class="container site-nav__inner">
+        <a href="index.html" class="site-nav__brand">Fund<span>ly</span></a>
+        <nav class="site-nav__links">
+          <a href="index.html">Discover</a>
+          <a href="register.html" class="btn btn-primary btn-sm">Sign up</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="auth-layout">
+      <div class="card auth-card">
+        <h1>Welcome back</h1>
+        <p class="text-muted">Log in to manage your campaigns and pledges.</p>
+        <form id="login-form">
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required autocomplete="username" />
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" required autocomplete="current-password" />
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Log in</button>
+        </form>
+        <p class="text-muted mt-lg mb-0">
+          New here? <a href="register.html">Create an account</a>
+        </p>
+      </div>
+    </div>
+
+    <script type="module" src="js/pages/auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fundly — Crowdfunding for bold ideas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <header class="site-nav">
+      <div class="container site-nav__inner">
+        <a href="index.html" class="site-nav__brand">Fund<span>ly</span></a>
+        <nav class="site-nav__links" id="nav-actions"></nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <h1>Fund what matters. Back the next big thing.</h1>
+          <p>
+            Discover campaigns in tech, music, education, and more. Support
+            creators directly and follow their journey to the finish line.
+          </p>
+          <div class="hero__cta">
+            <a href="#browse" class="btn btn-primary btn-lg">Explore campaigns</a>
+            <a href="create-campaign.html" class="btn btn-outline btn-lg btn-hero-outline">Start a campaign</a>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">Fundly</div>
+      </div>
+    </section>
+
+    <main class="container" id="browse">
+      <div class="filters-bar">
+        <div class="search-input">
+          <input
+            type="search"
+            id="search-q"
+            placeholder="Search campaigns…"
+            autocomplete="off"
+          />
+        </div>
+        <div class="category-bar" id="category-bar"></div>
+      </div>
+      <div class="campaign-grid" id="campaign-grid"></div>
+    </main>
+
+    <footer class="footer-min">
+      <div class="container">© Fundly</div>
+    </footer>
+
+    <script type="module" src="js/pages/home.js"></script>
+  </body>
+</html>

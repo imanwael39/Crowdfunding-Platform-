@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up — Fundly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <header class="site-nav">
+      <div class="container site-nav__inner">
+        <a href="index.html" class="site-nav__brand">Fund<span>ly</span></a>
+        <nav class="site-nav__links">
+          <a href="index.html">Discover</a>
+          <a href="login.html" class="btn btn-outline btn-sm">Log in</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="auth-layout">
+      <div class="card auth-card">
+        <h1>Create your account</h1>
+        <p class="text-muted">Join Fundly and start backing or building campaigns.</p>
+        <form id="register-form">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" required autocomplete="new-password" />
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Sign up</button>
+        </form>
+        <p class="text-muted mt-lg mb-0">
+          Already have an account? <a href="login.html">Log in</a>
+        </p>
+      </div>
+    </div>
+
+    <script type="module" src="js/pages/auth.js"></script>
+  </body>
+</html>

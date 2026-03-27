@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campaign — Fundly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <header class="site-nav">
+      <div class="container site-nav__inner">
+        <a href="index.html" class="site-nav__brand">Fund<span>ly</span></a>
+        <nav class="site-nav__links" id="nav-actions"></nav>
+      </div>
+    </header>
+
+    <main class="container form-page" id="main">
+      <p class="text-muted" id="loading">Loading…</p>
+      <div id="content" hidden></div>
+    </main>
+
+    <div class="modal-overlay" id="payment-overlay" aria-hidden="true">
+      <div class="modal" role="dialog" aria-labelledby="pay-title">
+        <h2 id="pay-title">Confirm payment</h2>
+        <p class="text-muted mb-0" id="pay-campaign"></p>
+        <div class="payment-modal__amount" id="pay-amount"></div>
+        <div id="pay-actions">
+          <button type="button" class="btn btn-primary btn-block" id="pay-confirm">
+            Confirm payment
+          </button>
+          <button type="button" class="btn btn-ghost btn-block mt-lg" id="pay-cancel">
+            Cancel
+          </button>
+        </div>
+        <div id="pay-processing" hidden class="payment-modal__processing">
+          <span class="spinner" aria-hidden="true"></span>
+          <span>Processing…</span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-min">
+      <div class="container">© Fundly</div>
+    </footer>
+
+    <script type="module" src="js/pages/campaign.js"></script>
+  </body>
+</html>
