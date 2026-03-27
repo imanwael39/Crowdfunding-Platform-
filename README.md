@@ -145,7 +145,7 @@ To access the admin dashboard, log in with an account that has `"role": "admin"`
 
 | Name | Role |
 |---|---|
-| Iman Wael | Developer — Graduation Project |
+| Iman Wael | Developer — JS Project |
 
 ---
 
@@ -157,4 +157,4 @@ To access the admin dashboard, log in with an account that has `"role": "admin"`
 
 ---
 
-*Built with ❤️ as a graduation project — ITI*
+*Built with ❤️ as a JS project — ITI*
